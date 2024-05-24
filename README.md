@@ -22,14 +22,25 @@ Nota: Asegúrate de agregar <link rel="stylesheet" href="styles.css"> en tu HTML
 
 
 Tu portafolio debe tener una sección "Welcome" con un id de welcome-section.
+
 Aprobado:Tu elemento #welcome-section debe contener un elemento h1.
+
 Aprobado:No debes tener ningún elemento h1 vacío dentro del elemento #welcome-section.
+
 Aprobado:Debes tener una sección "Projects" con un id de projects.
+
 Aprobado:Tu portafolio debe contener al menos un elemento con una clase project-tile.
+
 Aprobado:Tu elemento #projects debe contener al menos un elemento a.
+
 Aprobado:Tu portafolio debe tener una barra de navegación con un id de navbar.
+
 Aprobado:Tu elemento #navbar debe contener al menos un elemento a cuyo atributo href empiece con #.
+
 Aprobado:Tu portafolio debe tener un elemento a con un id de profile-link.
+
 Aprobado:Tu elemento #profile-link debe tener un atributo target de _blank.
+
 Aprobado:Tu portafolio debe usar al menos una consulta de medios.
+
 Aprobado:Tu elemento #navbar siempre debe estar en la parte superior del viewport.
