@@ -5,6 +5,7 @@
   --main-red: #e74c3c; /* rojo */
   --main-blue: #3498db; /* azul */
   --main-gray: #95a5a6; /* gris */
+  --main-black: #000000; /* negro */
 }
 
 /* Reset de estilos base */
@@ -43,16 +44,16 @@ h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-align: center;
+  color: var(--main-white); /* Letras blancas */
+  text-shadow: 2px 2px 0 var(--main-black); /* Contorno negro */
 }
 
 h1 {
   font-size: 6rem;
-  color: var(--main-peach); /* Peach Fuzz */
 }
 
 h2 {
   font-size: 4.2rem;
-  color: var(--main-blue); /* azul */
 }
 
 ul {
@@ -70,12 +71,11 @@ img {
 }
 
 /* Navegación */
-
 .nav-list a {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
-  color: #ffffff; /* Cambiar color del texto a blanco */
+  color: var(--main-white); /* Cambiar color del texto a blanco */
 }
 
 .nav {
@@ -85,7 +85,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-peach); /* Peach Fuzz */
+  background: var(--main-black); /* Fondo negro */
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -112,11 +112,13 @@ img {
 }
 
 .nav-list a:hover {
-  background: var(--main-blue); /* azul */
+  background: var(--main-white); /* blanco */
+  color: var(--main-black); /* Cambiar color del texto a negro */
 }
 
-/* Sección de bienvenida */
 
+
+/* Sección de bienvenida */
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -125,88 +127,78 @@ img {
   width: 100%;
   height: 100vh;
   background-color: var(--main-white); /* blanco */
-  background-image: linear-gradient(62deg, #ffdab9 0%, #3498db 100%); /* Peach Fuzz a azul */
+  background-image: linear-gradient(62deg, #ffff00 0%, #3498db 100%); /* Amarillo a azul */
 }
 
 .welcome-section > p {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-peach); /* Peach Fuzz */
 }
+
+.web-developer {
+  color: #ffff00; /* Amarillo */
+  text-shadow: 2px 2px 1px #808080; /* Contorno en gris */
+  font-weight: bold; /* Letras más gruesas */
+}
+
 
 /* Sección de lenguajes */
 .languages-section {
   text-align: center;
+  padding: 2rem 0;
+  background: var(--main-black); /* Fondo negro */
+  color: var(--main-white); /* Letras blancas */
 }
 
 .languages-list {
   display: flex;
-  justify-content: space-around;
-  padding: 0;
+  justify-content: center;
   list-style: none;
-}
-
-.languages-list li {
-  font-size: 1.6rem; /* Tamaño de fuente base */
-  padding: 1rem;
-  transition: transform 0.3s; /* Animación de transformación */
-}
-
-.languages-list li:hover {
-  transform: scale(1.1); /* Agrandar en hover */
-}
-
-/* Fin de sección de lenguajes */
-
-/* Sección de proyectos */
-
-.projects-section {
-  text-align: center;
-  padding: 10rem 2rem;
-  background: var(--main-blue); /* azul */
-}
-
-.projects-section-header {
-  max-width: 640px;
-  margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid var(--main-white);
-  color: var(--main-peach); /* Peach Fuzz */
-  background-color: var(--main-blue); /* azul */
-  padding: 1rem; /* Agregar un relleno para mejorar el espaciado */
-}
-
-/* Sección de lenguajes */
-.languages-section {
-  text-align: center;
-  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
-}
-
-.languages-list {
-  display: flex;
-  justify-content: space-around;
   padding: 0;
-  list-style: none;
 }
 
-.languages-list li {
-  font-size: 1.6rem; /* Tamaño de fuente base */
-  padding: 1rem;
-  transition: transform 0.3s; /* Animación de transformación */
+.language-item {
+  font-size: 4.2rem; /* Tamaño de fuente igual a h2 */
+  padding: 1rem 2rem;
+  transition: transform 0.3s, color 0.3s; /* Animación de transformación y color */
+  margin: 0 1rem;
 }
 
-.languages-list li:hover {
-  transform: scale(1.1); /* Agrandar en hover */
+/* Efectos de hover para cada idioma */
+#spanish:hover {
+  transform: scale(1.1);
+  color: #d52b1e; /* Rojo de la bandera de México */
 }
 
-/* Fin de sección de lenguajes */
+#spanish:hover strong {
+  color: #006341; /* Verde de la bandera de México */
+}
+
+#english:hover {
+  transform: scale(1.1);
+  color: #b22234; /* Rojo de la bandera de USA */
+}
+
+#english:hover strong {
+  color: #3c3b6e; /* Azul de la bandera de USA */
+}
+
+#portuguese:hover {
+  transform: scale(1.1);
+  color: #009c3b; /* Verde de la bandera de Brasil */
+}
+
+#portuguese:hover strong {
+  color: #ffdf00; /* Amarillo de la bandera de Brasil */
+}
+
 
 /* Projects section */
-
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-blue);
+  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255)); /* Fondo azul degradado */
 }
 
 .projects-section-header {
@@ -246,6 +238,30 @@ img {
   background: var(--main-gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+  transition: transform 0.3s ease-out, background 0.3s ease-out;
+  text-decoration: none;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Agranda el cuadro al pasar el cursor */
+  background: var(--main-light-gray); /* Cambia el color de fondo al pasar el cursor */
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+  color: black; /* Color de las letras */
+}
+
+.project-title:hover {
+  font-weight: bold; /* Negritas al pasar el cursor */
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid black; /* Contorno negro */
 }
 
 .code {
@@ -254,18 +270,7 @@ img {
 }
 
 .project:hover .code {
-  color: #ff7f50;
-}
-
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 2rem;
-  padding: 2rem 0.5rem;
+  color: #ff7f50; /* Cambia el color al pasar el cursor */
 }
 
 .btn {
@@ -310,7 +315,7 @@ img {
 
 .contact-section-header > h2 {
   font-size: 6rem;
-  color: var(--main-peach); /* Letras peach */
+  color: var(--main-black); /* Letras completamente negras */
 }
 
 @media (max-width: 28.75em) {
@@ -321,6 +326,7 @@ img {
 
 .contact-section-header > p {
   font-style: italic;
+  color: var(--main-black); /* Letras completamente negras */
 }
 
 .contact-links {
@@ -334,7 +340,7 @@ img {
 
 .contact-details {
   font-size: 2.4rem;
-  color: var(--main-peach); /* Letras peach */
+  color: var(--main-black); /* Letras completamente negras */
   text-shadow: 2px 2px 1px var(--main-gray); /* Contorno en gris */
   transition: transform 0.3s ease-out;
 }
@@ -344,24 +350,25 @@ img {
 }
 
 
+
 /* Footer */
 footer {
   font-weight: 300;
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: var(--main-peach); /* Usando el color Peach Fuzz para el fondo */
+  background: var(--main-black); /* Fondo negro */
   border-top: 4px solid var(--main-red);
 }
 
 footer > p {
   margin: 2rem;
-  color: var(--main-gray); /* Cambiando el color de las letras a gris */
+  color: var(--main-white); /* Letras blancas */
 }
 
 footer i {
   vertical-align: middle;
-  color: var(--main-gray); /* Cambiando el color de los iconos a gris */
+  color: var(--main-white); /* Iconos blancos */
 }
 
 @media (max-width: 28.75em) {
@@ -370,3 +377,4 @@ footer i {
     text-align: center;
   }
 }
+
