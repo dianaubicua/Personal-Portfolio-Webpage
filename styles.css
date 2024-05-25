@@ -198,19 +198,13 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255)); /* Fondo azul degradado */
+  background: linear-gradient(90deg, #ffff00, #3498db); /* Fondo amarillo a azul */
 }
 
 .projects-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
   border-bottom: 0.2rem solid var(--main-white);
-}
-
-@media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
-  }
 }
 
 /* "Automagic" image grid using no media queries */
@@ -224,37 +218,24 @@ img {
   margin-bottom: 6rem;
 }
 
-@media (max-width: 30.625em) {
-  .projects-section {
-    padding: 6rem 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .project {
-  background: var(--main-gray);
+  background: var(--main-black);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   transition: transform 0.3s ease-out, background 0.3s ease-out;
   text-decoration: none;
+  color: var(--main-white);
 }
 
 .project:hover {
   transform: scale(1.05); /* Agranda el cuadro al pasar el cursor */
-  background: var(--main-light-gray); /* Cambia el color de fondo al pasar el cursor */
+  background: var(--main-white); /* Cambia el color de fondo al pasar el cursor */
+  color: var(--main-black); /* Cambia el color de texto al pasar el cursor */
 }
 
 .project-title {
   font-size: 2rem;
   padding: 2rem 0.5rem;
-  color: black; /* Color de las letras */
-}
-
-.project-title:hover {
-  font-weight: bold; /* Negritas al pasar el cursor */
 }
 
 .project-image {
@@ -264,40 +245,18 @@ img {
   border: 2px solid black; /* Contorno negro */
 }
 
-.code {
-  color: var(--main-gray);
-  transition: color 0.3s ease-out;
-}
-
-.project:hover .code {
-  color: #ff7f50; /* Cambia el color al pasar el cursor */
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
-}
-
 .btn-show-all {
   font-size: 2rem;
-  background: var(--main-gray);
-  transition: background 0.3s ease-out;
+  background: var(--main-black);
+  color: var(--main-white);
+  transition: background 0.3s ease-out, color 0.3s ease-out;
 }
 
 .btn-show-all:hover {
-  background: var(--main-red);
+  background: var(--main-white); /* Cambia el color de fondo al pasar el cursor */
+  color: var(--main-black); /* Cambia el color de texto al pasar el cursor */
 }
 
-.btn-show-all:hover > i {
-  transform: translateX(2px);
-}
-
-.btn-show-all > i {
-  margin-left: 10px;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-}
 
 /* Contact section */
 
@@ -343,10 +302,15 @@ img {
   color: var(--main-black); /* Letras completamente negras */
   text-shadow: 2px 2px 1px var(--main-gray); /* Contorno en gris */
   transition: transform 0.3s ease-out;
+  background: var(--main-white); /* Fondo blanco */
+  padding: 1rem 2rem;
+  margin: 0.5rem;
 }
 
 .contact-details:hover {
   transform: translateY(8px);
+  background: linear-gradient(90deg, #ffff00, #3498db); /* Fondo amarillo a azul */
+  color: var(--main-black); /* Cambio de color de texto al hacer hover */
 }
 
 
@@ -358,7 +322,7 @@ footer {
   justify-content: space-evenly;
   padding: 2rem;
   background: var(--main-black); /* Fondo negro */
-  border-top: 4px solid var(--main-red);
+  border-top: 8px solid #ffff00;
 }
 
 footer > p {
@@ -377,4 +341,3 @@ footer i {
     text-align: center;
   }
 }
-
